@@ -1,1 +1,21 @@
-/* add home page styles here */
+.left {
+    border: 8px plum solid;
+    margin: 40px;
+    padding: 40px;
+    background-color: aliceblue;
+}
+
+.right {
+    border: 8px yellow solid;
+    margin: 40px;
+    padding: 40px;
+    background-color: aliceblue;
+}
+
+form {
+    font-size: xx-large;
+}
+
+input {
+    height: 30px;
+}
