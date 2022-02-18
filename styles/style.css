@@ -51,6 +51,7 @@ header {
     background-color: var(--color3);
     height: var(--header-height);
     box-shadow: var(--shadow);
+    background-color: burlywood;
 }
 
 h2 {
@@ -74,17 +75,6 @@ p {
     margin: var(--gutter);
 }
   
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
-}
-
   
   @keyframes pulse {
     20% {

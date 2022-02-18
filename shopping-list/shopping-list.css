@@ -44,3 +44,18 @@ li {
     transform: translateY(4px);
 
 }
+header h1 {
+    padding-right: 800px;
+}
+
+.shopping-main {
+    border: 5px wheat solid;
+    background-color: antiquewhite;
+}
+
+body {
+    background-image: url('../assets/store.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
