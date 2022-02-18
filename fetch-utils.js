@@ -22,6 +22,12 @@ export async function completeItem(id) {
     checkError(resp);
 }
 
+export async function deleteAllItems() {
+    const user = client.auth.user().id;
+    const resp = await client.from('items').delete().match({ user_id: user });
+
+    return checkError(resp);
+}
 
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
