@@ -10,6 +10,12 @@ export async function getItems() {
     return checkError(resp);
 }
 
+export async function createItem(description) {
+    const resp = await client.from('items').insert({ description });
+
+    return checkError(resp);
+}
+
 
 
 export function getUser() {
@@ -24,7 +30,7 @@ export function checkAuth() {
 
 export function redirectIfLoggedIn() {
     if (getUser()) {
-        location.replace('./other-page');
+        location.replace('./shopping-list');
     }
 }
 
