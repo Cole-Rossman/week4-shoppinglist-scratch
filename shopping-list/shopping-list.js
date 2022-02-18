@@ -25,3 +25,12 @@ async function renderItems() {
 }
 renderItems();
 
+const shoppingForm = document.getElementById('shopping-form');
+
+shoppingForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(shoppingForm);
+    await createItem(data.get('shopping-item'));
+    renderItems();
+    shoppingForm.reset();
+});
