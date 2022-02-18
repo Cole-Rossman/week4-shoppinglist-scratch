@@ -16,6 +16,11 @@ export async function createItem(description) {
     return checkError(resp);
 }
 
+export async function completeItem(id) {
+    const resp = await client.from('items').update({ complete: true }).match({ id });
+
+    checkError(resp);
+}
 
 
 export function getUser() {
