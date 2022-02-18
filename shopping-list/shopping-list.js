@@ -39,6 +39,5 @@ const deleteButton = document.getElementById('delete-button');
 
 deleteButton.addEventListener('click', async () => {
     await deleteAllItems();
-
-    renderItems;
+    renderItems();
 });

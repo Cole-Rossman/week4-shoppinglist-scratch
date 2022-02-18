@@ -25,7 +25,7 @@ export async function completeItem(id) {
 export async function deleteAllItems() {
     const user = client.auth.user().id;
     const resp = await client.from('items').delete().match({ user_id: user });
-
+    console.log(user);
     return checkError(resp);
 }
 
