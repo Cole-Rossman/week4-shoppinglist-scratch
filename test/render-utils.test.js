@@ -1,18 +1,22 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { renderItem } from '../render-utils.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
+test('renderItem should render an li with information and a complete class when clicked', (expect) => {
     
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+    const expected = `<li class="complete">Brussels sprouts</li>` ;
+    
+    const actual = renderItem({ description: 'Brussels sprouts', complete: true });
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.equal(actual.outerHTML, expected);
 });
+
+test('renderItem should render an li with information without a complete class', (expect) => {
+    
+    const expected = `<li>Brussels sprouts</li>` ;
+    
+    const actual = renderItem({ description: 'Brussels sprouts', complete: false });
+
+    expect.equal(actual.outerHTML, expected);
+});
+
